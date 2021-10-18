@@ -10,14 +10,18 @@
 
 
 <body>
-    <div>
-        {% for product in products %}
+     <div>    
+        {% for key,product in products %}
+            {{ product }} 
 
-        <div> {{ product }} </div>
-        
-        {% endfor %}
-               
+            {% if loop.index % 3 == 0 %}
     </div>
+    <div>                
+            {% endif %}            
+            {% endfor %}
+              
+    </div>
+    {{ dump(products) }}
        
 </body>
 </html>
